@@ -1,0 +1,53 @@
+from abc import ABC, abstractmethod
+
+
+class Worker(ABC):
+
+  @abstractmethod
+  def work(self):
+    pass
+
+
+class Heart:
+
+  def __init__(self):
+    self.is_beating = True
+
+
+class Book:
+
+  def __init__(self, title):
+    self.title = title
+
+
+class Person(Worker):
+
+  def __init__(self, name):
+    self.name = name
+
+  def work(self):
+    print(f"{self.name} is working.")
+
+
+class Student(Person):
+
+  def __init__(self, name, book: Book):
+    super().__init__(name)
+    self.heart = Heart()
+    self.book = book
+
+
+class School:
+
+  def __init__(self, name):
+    self.name = name
+    self.student = None
+
+  def enroll(self, student: Student):
+    self.student = student
+
+
+class Printer:
+
+  def print_book(self, book: Book):
+    print(f"Printing the book: {book.title}")
