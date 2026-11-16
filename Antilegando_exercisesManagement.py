@@ -40,3 +40,6 @@ person2 = Teacher("Mona", 30)
 person2.display_info()
 person2.teach()
 person2.role()
+
+import abc
+from abc import ABC, abstractmethod
