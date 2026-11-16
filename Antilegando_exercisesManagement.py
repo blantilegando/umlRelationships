@@ -18,6 +18,14 @@ class Student(Person):
         print(f"{self.name} is studying.")
 
 
+class Teacher(Person):
+    def teach(self):
+        print(f"{self.name} is teaching.")
+
 person1 = Student("Lina", 20)
 person1.display_info()
 person1.study()
+
+person2 = Teacher("Mona", 30)
+person2.display_info()
+person2.teach()
