@@ -1,16 +1,22 @@
-class Person:
+from abc import ABC, abstractmethod
+
+class Person(ABC):
     def __init__(self, name: str, age: int):
         self.name = name
         self.__age = age
 
+
     def get_name(self):
         return self.name
+
 
     def get_age(self):
         return self.__age
 
+    @abstractmethod
     def role(self):
         print(f"{self.__name} is a person")
+
 
     def display_info(self):
         print(f"\nName: {self.name}\nAge: {self.__age}  #It's better because the process is clean and avoids errors.")
@@ -40,6 +46,3 @@ person2 = Teacher("Mona", 30)
 person2.display_info()
 person2.teach()
 person2.role()
-
-import abc
-from abc import ABC, abstractmethod
