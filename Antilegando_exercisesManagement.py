@@ -1,4 +1,4 @@
-#heliumAntilegando_theAbstractScientist.py
+#heliumAntilegando_exercisesManagement.py
 #Name: Betelgeuse L. Antilegando
 #Section: Helium
 
